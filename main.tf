@@ -19,8 +19,8 @@ resource "aws_vpc" "ds_vpc" {
 
 #Private Subnet 1
 resource "aws_subnet" "priv_subnet_1" {
-    availability_zone = priv_subnet_az_1
-    cidr_block        = priv_subnet_cidr_1
+    availability_zone = var.priv_subnet_az_1
+    cidr_block        = var.priv_subnet_cidr_1
     vpc_id            = aws_vpc.ds_vpc.id
 
     tags = var.vpc_tags
@@ -28,8 +28,8 @@ resource "aws_subnet" "priv_subnet_1" {
 
 #Private Subnet 2
 resource "aws_subnet" "priv_subnet_2" {
-    availability_zone = priv_subnet_az_2
-    cidr_block        = priv_subnet_cidr_2
+    availability_zone = var.priv_subnet_az_2
+    cidr_block        = var.priv_subnet_cidr_2
     vpc_id            = aws_vpc.ds_vpc.id
 
     tags = var.vpc_tags
@@ -40,10 +40,6 @@ resource "aws_subnet" "priv_subnet_2" {
 #Create the main route table for the VPC
 resource "aws_route_table" "main_rt" {
     vpc_id = aws_vpc.ds_vpc.id
-
-    route {
-        cidr_block = "172.23.0.0/16"
-    }
 }
 
 #Create the Internet Gateway
