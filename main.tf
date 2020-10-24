@@ -13,7 +13,7 @@ provider "aws" {
 
 #Create the VPC
 resource "aws_vpc" "ds_vpc" {
-    cidr_block = var.vpc_cidr_block
+    cidr_block = var.vpc_cidr
     tags       = var.vpc_tags
 }
 
