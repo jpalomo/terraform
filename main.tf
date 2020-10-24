@@ -23,7 +23,7 @@ resource "aws_subnet" "priv_subnet_1" {
     cidr_block        = priv_subnet_cidr_1
     vpc_id            = aws_vpc.ds_vpc.id
 
-    tags = Name = var.vpc_tags
+    tags = var.vpc_tags
 }
 
 #Private Subnet 2
@@ -32,7 +32,7 @@ resource "aws_subnet" "priv_subnet_2" {
     cidr_block        = priv_subnet_cidr_2
     vpc_id            = aws_vpc.ds_vpc.id
 
-    tags = Name = var.vpc_tags
+    tags = var.vpc_tags
 }
 
 #add 2 more private subnets
