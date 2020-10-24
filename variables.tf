@@ -1,8 +1,14 @@
+variable "aws_region" {
+  description = "Region of AWS resources"
+  type        = string
+  default     = "us-west-1"
+}
+
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
   default     = "example-terraform-vpc"
-}
+} 
 
 variable "vpc_cidr" {
   description = "CIDR block for VPC"
