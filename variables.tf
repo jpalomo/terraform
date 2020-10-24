@@ -48,3 +48,19 @@ variable "vpc_tags" {
     Environment = "dev"
   }
 }
+
+variable "priv_subnet_az_1" {
+  type        = string
+}
+
+variable "priv_subnet_az_2" {
+  type        = string
+}
+
+variable "priv_subnet_cidr_1" {
+  type        = string
+}
+
+variable "priv_subnet_cidr_2" {
+  type        = string
+}
