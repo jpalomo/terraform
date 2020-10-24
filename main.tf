@@ -50,7 +50,7 @@ resource "aws_internet_gateway" "gw" {
 
 #Create a route for the route table
 resource "aws_route" "r1" {
-    route_table_id         = aws_route_table.main_rt_id
+    route_table_id         = aws_route_table.main_rt.id
     destination_cidr_block = "0.0.0.0/0"
     gateway_id             = aws_internet_gateway.gw.id 
 }
