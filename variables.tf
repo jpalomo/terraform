@@ -1,4 +1,3 @@
-/*
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
@@ -42,4 +41,4 @@ variable "vpc_tags" {
     Terraform   = "true"
     Environment = "dev"
   }
-}*/
+}
