@@ -1,8 +1,14 @@
+variable "aws_region" {
+  description = "Region of AWS resources"
+  type        = string
+  default     = "us-west-1"
+}
+
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
   default     = "example-terraform-vpc"
-}
+} 
 
 variable "vpc_cidr" {
   description = "CIDR block for VPC"
@@ -41,4 +47,20 @@ variable "vpc_tags" {
     Terraform   = "true"
     Environment = "dev"
   }
+}
+
+variable "priv_subnet_az_1" {
+  type        = string
+}
+
+variable "priv_subnet_az_2" {
+  type        = string
+}
+
+variable "priv_subnet_cidr_1" {
+  type        = string
+}
+
+variable "priv_subnet_cidr_2" {
+  type        = string
 }
